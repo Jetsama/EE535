@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.5)  10 SEP 2023 23:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.5)  13 SEP 2023 03:36
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **./Lab1Report.tex
 (Lab1Report.tex
@@ -638,43 +638,81 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 aryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.external.code.tex
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer/libra
+ries\tikzlibraryexternal.code.tex
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.st
+y
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzexternalshared.code.tex)))
+\openout3 = `Lab1Report.auxlock'.
+
+
+(C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count307
+\float@exts=\toks46
+\float@box=\box67
+\@float@everytoks=\toks47
+\@floatcapt=\box68
+)
 (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count307
-\l__pdf_internal_box=\box67
+\l__color_backend_stack_int=\count308
+\l__pdf_internal_box=\box69
 ) (Lab1Report.aux)
 \openout1 = `Lab1Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
+\scratchcounter=\count309
 \scratchdimen=\dimen280
-\scratchbox=\box68
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count311
+\scratchbox=\box70
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count312
 \MPscratchDim=\dimen281
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks47
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks49
 )
 (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -724,72 +762,120 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 12.
+ on input line 15.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (C:\Users\Jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 50--57
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
-
- []
-
-PGFPlots: reading {PyData/Wafer_1-TaucPlot.csv}
-Missing character: There is no x in font nullfont!
-PGFPlots: reading {"T_R_A Data/Wafer_1-refl2.csv"}
-Missing character: There is no x in font nullfont!
-
-Overfull \hbox (0.64153pt too wide) in paragraph at lines 82--99
-[] 
  []
 
 [1
 
-{C:/Users/Jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] (Lab1Report.aux)
+{C:/Users/Jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+
+ []
+
+===== Image 'Lab1Report-figure0' is up-to-date. ======
+===== Image 'Lab1Report-figure1' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--152
+
+ []
+
+[2 <./Lab1Report-figure0.pdf>]
+===== Image 'Lab1Report-figure2' is up-to-date. ======
+===== Image 'Lab1Report-figure3' is up-to-date. ======
+
+Overfull \hbox (3.76869pt too wide) in paragraph at lines 157--198
+[][] [] 
+ []
+
+[3 <./Lab1Report-figure1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+===== Image 'Lab1Report-figure4' is up-to-date. ======
+===== Image 'Lab1Report-figure5' is up-to-date. ======
+[4 <./Lab1Report-figure2.pdf> <./Lab1Report-figure3.pdf>] [5 <./Lab1Report-figu
+re4.pdf>]
+===== Image 'Lab1Report-figure6' is up-to-date. ======
+===== Image 'Lab1Report-figure7' is up-to-date. ======
+
+Overfull \hbox (3.76869pt too wide) in paragraph at lines 257--297
+[][] [] 
+ []
+
+===== Image 'Lab1Report-figure8' is up-to-date. ======
+[6 <./Lab1Report-figure5.pdf> <./Lab1Report-figure6.pdf> <./Lab1Report-figure7.
+pdf>]
+===== Image 'Lab1Report-figure9' is up-to-date. ======
+===== Image 'Lab1Report-figure10' is up-to-date. ======
+===== Image 'Lab1Report-figure11' is up-to-date. ======
+
+Overfull \hbox (0.66908pt too wide) in paragraph at lines 361--402
+[][] [] 
+ []
+
+[7 <./Lab1Report-figure8.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--408
+
+ []
+
+[8 <./Lab1Report-figure9.pdf> <./Lab1Report-figure10.pdf> <./Lab1Report-figure1
+1.pdf>] [9] (Lab1Report.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26229 strings out of 475247
- 707115 string characters out of 5757793
- 2608039 words of memory out of 5000000
- 47362 multiletter control sequences out of 15000+600000
- 565317 words of font info for 65 fonts, out of 8000000 for 9000
+ 25906 strings out of 475247
+ 698024 string characters out of 5757793
+ 1926801 words of memory out of 5000000
+ 47012 multiletter control sequences out of 15000+600000
+ 560672 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,18n,107p,708b,2258s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,107p,737b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmmi7.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Jonat/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jonat/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jonat/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jo
-nat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/U
-sers/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pf
-b><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb>
-Output written on Lab1Report.pdf (3 pages, 460586 bytes).
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jonat/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jonat/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Jonat/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jonat/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jo
+nat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Lab1Report.pdf (9 pages, 2324878 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 311 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

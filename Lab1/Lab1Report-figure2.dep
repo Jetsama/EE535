@@ -1,0 +1,2 @@
+Lab1Report-figure2.pdf: PyData/Wafer_1-TaucDirect.csv
+Lab1Report-figure2.pdf: PyData/Wafer_1-TaucDirectLINEAR.csv

@@ -8,6 +8,9 @@
 \usetikzlibrary{datavisualization.formats.functions}
 \usepackage[left=25mm,right=25mm]{geometry}
 \usepackage{pgfplots}
+\usepgfplotslibrary{external} 
+\tikzexternalize
+\usepackage{float} 
 
 \begin{document}
 
@@ -27,45 +30,154 @@
 
 \section*{Abstract}
 \begin{indentPar}{1cm}
-The band gap of a semiconductor defines its properties. Band gap of semiconductors can be measured by the absorption and reflection of light.
+The band gap of a semiconductor defines its properties. Band gap of semiconductors can be measured by the absorption and reflection of light. Using the Cary 5000 and the Filmetrics F70 spectrophotometer measurements of Reflection and Transmission of 3 wafers were collected. These measurements were then analyzed with scripts to understand the band gap and materials used in the wafers. This data allowed for accurate identification of semiconductor and whether the band gap was direct or indirect.
+
+
+
+
 \end{indentPar}
 
 
 \section*{Introduction}
 \begin{indentPar}{1cm}
-Three wafers were loaded into a spectrometer to measure their optical properties. These measured properties allowed for the calculation of band gap and whether the band gap is direct or indirect. The band gap of of a material determines its conductivity or in the case of an LED or solar panel what frequency of light it will produce/absorb. Determining if the band gap is direct would inform if any energy is required from the lattice structure whereas indirect wouldn't require this extra energy.
+Three wafers were loaded into a spectrometer to measure their optical properties. These measured properties allowed for the calculation of band gap and whether the band gap is direct or indirect. The band gap of of a material determines its conductivity or in the case of an LED or solar panel what frequency of light it will produce/absorb. Determining if the band gap is direct would inform if any energy is required from the lattice structure whereas indirect wouldn't require this extra energy. This is important for light emitting diodes because indirect band gaps are poor emitters \cite{Lasers}.
+
 \end{indentPar}
 
 
 
 \section*{Experimental}
 \begin{indentPar}{1cm}
-In this lab we measured the band gap through measurements of reflection and absorption. These measurements were done with the Cary 5000. This spectrometer works by comparing two slides. This allows to remove influence of the glass on the wafer's absorbtion and transmition.
+In this lab we measured the band gap through measurements of reflection and absorption. These measurements were done with the Cary 5000. This spectrophotometer has a range of 175-3300nm \cite{carry} and allows for the comparison of two samples at the same time. This was used to compare the sample wafer and a blank glass simultaneously. This allows to remove influence of the glass on the wafer's measurements. The other tool used was the Filmetrics F70 spectrometer. This spectrometer was much faster but had a narrower range of 380-1700nm. This spectrophotometer was calibrated by using a silicon wafer provided by Filmetrics.\\
+
+
+
 \end{indentPar}
 
 
 \section*{Theory}
 \begin{indentPar}{1cm}
 \begin{indentPar}{1cm}
-$Transmition = T$ - \% of light 
-$\\Reflectance = R$ - \% of light
-$ \\Absorbance coefficient = \alpha \\ $
-$\\Reflection =$ Intensity of neglected light
+Transmition $= T$ - \% of light 
+\\Reflectance $= R$ - \% of light
+\\Absorbance  $= A $  - \% of light
+\\$A+T+R = 1$
+ \\Absorbance coefficient $= \alpha \\ $
+ $\\Reflection =$ Intensity of neglected light
 $\\A= \dfrac{|I_a|}{|I|}$
- For direct Eg $\alpha =(hv-Eg)^{1/2}\\T = (1-R^2)e^{-\alpha t}\\ \alpha = (1/t)ln((1-R^2)/T)$
+
+ $\alpha =(hv-Eg)^{1/2}$ - when direct \cite{tauc}
+ \\$\alpha =(hv-Eg)^{2}$ - when indirect \cite{tauc}
+ \\$T = (1-R^2)e^{-\alpha t}
+ \\ \alpha = (1/t)ln((1-R^2)/T)$
 \\
 \end{indentPar}
 
-These equations equations were derived from and the provided CSV output files were used inside a python script.
+These equations equations were derived and then used on outputted data files were using a python script. 
 \end{indentPar}
+
+
+
 \section*{Results}
 \begin{indentPar}{1cm}
-After running the spectrometer there were data points for the three wafers. These datapoints included transmition, reflection, and absorption the following graphs.
+After running the spectrometer there were data points for the three wafers. These data points included transmission, reflection, and absorption the following graphs.
 \\
+The formula $A+R+T = 1$ was used to create the 3 plots bellow. R and T were provided but A was calculated. As can be seen in Figure ~\ref{WOneATR} the wafer does not absorb the light until near 1500nm.\\
 
+
+
+
+\begin{figure}[H]
+\caption{Graph showing the reflection, transmission, and absorption of Wafer 1}
+\label{WOneATR}
+
+ \centering
+\begin{tikzpicture}
+      \begin{axis}[
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=Wavelength (nm), % Set the labels
+          ylabel=Percent of light,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+	`	\addplot 
+        table[x=Wavelength (nm),y=R, col sep=comma, skip first n=1] {T_R_A Data/Wafer_1-refl2.csv}; 
+		\addplot 
+        table[x=Wavelength (nm),y=T, col sep=comma, skip first n=1] {T_R_A Data/Wafer_1-trans.csv}; 
+        \addplot 
+        table[x=Wavelength (nm),y=A, col sep=comma] {PyData/Wafer_1-A.csv}; 
+
+       \legend{Wafer 1}
+         \addlegendentry{Reflection}
+         \addlegendentry{Transmission}
+         \addlegendentry{Absorption}
+      \end{axis}
+    \end{tikzpicture}
+    \end{figure}
+    
+    
+    
+    
+    
+   
+    
+    
+    
+A plot was created, figure 1, by using the reflection and transmission data to calculate the $\alpha$ of the wafer. The issue with this approach was the transmission percentage went below 0 which should not be possible. To compensate for this T was set to 0.00001 whenever it was below 0. This should affect the band gap of the graph because it will only affect values beyond the linear region. The first step was to calculate alpha using the equation $ \alpha = (1/t)ln((1-R^2)/T)$. The width was known at 11.3 mils which was then converted into centimeters by diving by 393.7.
+\\
+\begin{figure}[H]
+\label{WOneAbsCo}
+\caption{Graph showing energy (eV) versus the absorbance coefficient of Wafer 1}
     \begin{tikzpicture}
       \begin{axis}[
-          width=\linewidth, % Scale the plot to \linewidth
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$\alpha$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-Alpha.csv}; 
+
+       \legend{Wafer 1 - Alpha Plot}x
+         \addlegendentry{$\alpha =\dfrac{1}{t}ln(\dfrac{1-R^2}{T}) $}
+      \end{axis}
+    \end{tikzpicture}
+     \end{figure}
+     
+     In Figure \ref{WOneAbsCo} there is a lot of spread after the band gap region. This is probably due to the hard limit set to T. This limit was added to keep negative or zero values from affecting the equation. Both zero and negative values are not possible but measurements have values barely negative below 1500nm. 
+\begin{figure}[H]
+\caption{Graphs showing direct and indirect Tauc plots of Wafer 1}
+    \begin{tikzpicture}
+      \begin{axis}[
+          width=8cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$(\alpha h v)^{1/2}(cm^{2})$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-TaucDirect.csv}; 
+		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-TaucDirectLINEAR.csv}; 
+
+
+       \legend{Wafer 1 - Tauc Direct Plot}x
+         \addlegendentry{$(\alpha *hv)^2 $}
+      \end{axis}
+    \end{tikzpicture}
+        \begin{tikzpicture}
+      \begin{axis}[
+          width=8cm, % Scale the plot to \linewidth
           grid=major, % Display a grid
           grid style={dashed,gray!30}, % Set the style
           xlabel=hv(Ev), % Set the labels
@@ -75,54 +187,257 @@ After running the spectrometer there were data points for the three wafers. Thes
         ]
         \addlegendimage{empty legend}
         \addplot 
-        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-TaucPlot.csv}; 
-        \legend{Wafer 1 - Tauc Plot}x
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-TaucInDirect.csv}; 
+		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_1-TaucInDirectLINEAR.csv}; 
+
+       \legend{Wafer 1 - Tauc Indirect Plot}x
+                  \addlegendentry{$(\alpha *hv)^{\frac{1}{2}} $}
+      \end{axis}
+    \end{tikzpicture}
+     \end{figure}
+     
+Using these plots to determine whether direct or indirect. The next step to finding the band gap was extending the linear region of the tauc plot. To create a linear equation points were taken in the linear region and extended into a linear equation.\\ 
+    
+The next figures reuse the scripts used to analyze the second wafer's measurements. The only value that changed was the thickness of the wafer, which was now 7.8mils. 
+
+ \begin{figure}[H]
+\caption{Graph showing the reflection, transmission, and absorption of Wafer 2}
+ \centering
+\begin{tikzpicture}
+      \begin{axis}[
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=Wavelength (nm), % Set the labels
+          ylabel=Percent of light,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+	`	\addplot 
+        table[x=Wavelength (nm),y=R, col sep=comma, skip first n=1] {T_R_A Data/Wafer_2-refl2.csv}; 
+		\addplot 
+        table[x=Wavelength (nm),y=T, col sep=comma, skip first n=1] {T_R_A Data/Wafer_2-trans.csv}; 
+        \addplot 
+        table[x=Wavelength (nm),y=A, col sep=comma] {PyData/Wafer_2-A.csv}; 
+
+       \legend{Wafer 2}
+         \addlegendentry{Reflection}
+         \addlegendentry{Transmission}
+         \addlegendentry{Absorption}
+      \end{axis}
+    \end{tikzpicture}
+    \end{figure}
+    \begin{figure}[H]
+\label{WTwoAbsCo}
+\caption{Graph showing energy (eV) versus the absorbance coefficient of Wafer 2}
+    \begin{tikzpicture}
+      \begin{axis}[
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$\alpha$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_2-Alpha.csv}; 
+
+       \legend{Wafer 2 - Alpha Plot}x
          \addlegendentry{$\alpha =\dfrac{1}{t}ln(\dfrac{1-R^2}{T}) $}
       \end{axis}
     \end{tikzpicture}
-    \\This plot was created by using the reflection and transmition data to calculate the $\alpha$ of the wafer. 
+     \end{figure}
+    
+ \begin{figure}[H]
+\caption{Graphs showing direct and indirect Tauc plots of Wafer 2}
     \begin{tikzpicture}
       \begin{axis}[
-          width=\linewidth, % Scale the plot to \linewidth
+          width=8cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$(\alpha h v)^{1/2}(cm^{2})$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_2-TaucDirect.csv}; 
+		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_2-TaucDirectLINEAR.csv}; 
+
+       \legend{Wafer 2 - Tauc Direct Plot}x
+         \addlegendentry{$(\alpha *hv)^2 $}
+      \end{axis}
+    \end{tikzpicture}
+        \begin{tikzpicture}
+      \begin{axis}[
+          width=8cm, % Scale the plot to \linewidth
           grid=major, % Display a grid
           grid style={dashed,gray!30}, % Set the style
           xlabel=hv(Ev), % Set the labels
           ylabel=$(\alpha h v)^{1/2}(cm^{1/2})$,
           legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
-          x tick label style={rotate=0,anchor=north} 
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
         ]
+        \addlegendimage{empty legend}
         \addplot 
-        table[x=Wavelength (nm),y=R,skip first n=1, col sep=comma] {T_R_A Data/Wafer_1-refl2.csv}; 
-        \legend{Plot}x
-      \end{axis}
-    \end{tikzpicture}    
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_2-TaucInDirect.csv}; 
+		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_2-TaucInDirectLINEAR.csv}; 
 
-    wafer 1 .78 band gap
+       \legend{Wafer 2 - Tauc Indirect Plot}x
+                  \addlegendentry{$(\alpha *hv)^{\frac{1}{2}} $}
+      \end{axis}
+    \end{tikzpicture}
+     \end{figure}
+        
+    
+    
+    
+    
+    
+   The same steps were used for wafer 3 that had a thickness of 1mm.
+
+ 
+ 
+\begin{figure}[H]
+\caption{Graph showing the reflection, transmission, and absorption of Wafer 3}
+ \centering
+\begin{tikzpicture}
+      \begin{axis}[
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=Wavelength (nm), % Set the labels
+          ylabel=Percent of light,
+          legend style={at={(0.5,-0.2)},anchor=north,line width=.1pt,mark size=.2pt}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+	`	\addplot 
+        table[x=Wavelength (nm),y=R, col sep=comma] {T_R_A Data/Wafer3 Reflection Filmetrics.csv}; 
+		\addplot 
+        table[x=Wavelength (nm),y=T, col sep=comma] {T_R_A Data/Wafer3 Transmission Filmetrics.csv}; 
+        \addplot 
+        table[x=Wavelength (nm),y=A, col sep=comma] {PyData/Wafer_3-A.csv}; 
+
+       \legend{Wafer 3}x
+         \addlegendentry{Reflection}
+         \addlegendentry{Transmission}
+         \addlegendentry{Absorption}
+      \end{axis}
+    \end{tikzpicture}
+    \end{figure}
+    
+    \begin{figure}[H]
+\label{WThreeAbsCo}
+\caption{Graph showing energy (eV) versus the absorbance coefficient of Wafer 3}
+    \begin{tikzpicture}
+      \begin{axis}[
+          width=10cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$\alpha$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_3-Alpha.csv}; 
+
+       \legend{Wafer 3 - Alpha Plot}x
+         \addlegendentry{$\alpha =\dfrac{1}{t}ln(\dfrac{1-R^2}{T}) $}
+      \end{axis}
+    \end{tikzpicture}
+     \end{figure}
+     \begin{figure}[H]
+\caption{Graphs showing direct and indirect Tauc plots of Wafer 3}
+    \begin{tikzpicture}
+      \begin{axis}[
+          width=8cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$(\alpha h v)^{1/2}(cm^{2})$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_3-TaucDirect.csv}; 
+		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_3-TaucDirectLINEAR.csv}; 
+
+
+       \legend{Wafer 3 - Tauc Direct Plot}x
+         \addlegendentry{$(\alpha *hv)^2 $}
+      \end{axis}
+    \end{tikzpicture}
+        \begin{tikzpicture}
+      \begin{axis}[
+          width=8cm, % Scale the plot to \linewidth
+          grid=major, % Display a grid
+          grid style={dashed,gray!30}, % Set the style
+          xlabel=hv(Ev), % Set the labels
+          ylabel=$(\alpha h v)^{1/2}(cm^{1/2})$,
+          legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot
+          x tick label style={rotate=0,anchor=north} % Display labels sideways
+        ]
+        \addlegendimage{empty legend}
+        \addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_3-TaucInDirect.csv}; 
+ 		\addplot 
+        table[x=Ev,y=alpha, col sep=comma] {PyData/Wafer_3-TaucInDirectLINEAR.csv}; 
+
+       \legend{Wafer 3 - Tauc Indirect Plot}x
+                  \addlegendentry{$(\alpha *hv)^{\frac{1}{2}} $}
+      \end{axis}
+    \end{tikzpicture}
+     \end{figure}
+    
+For determining the materials and there band gaps, many values were used. The easiest being using the absorbence wavelengths of different semiconductor materials. Wafer 1 had an absorbanance near 1.8$\mu$m. This is the same as germanium. The same inference can be made about wafer 2. The second wafer's absorbance wavelendth was at around 1.1-1.2$\mu$m. This is nearly the same as silicon which resides at 1.1$\mu$m The last wafer's wavelength was closest to gallium arsenide or amorphous silicon.\cite{semi}.\\
+The next method of determining the material is using the band gap Ev. This is done with the linear equations created from the Tauc plots. This method shows values of 0.7668eV for the first wafer, 1.2664eV for the second, and the last wafer 1.6311eV. Values of many semiconductors can be found in reference. For the first wafer, semiconductors that match the eV calculated could be Ge at 0.67eV or GaSb at 0.7eV. For the second, Si at 1.11eV and potentially GaAs at 1.43eV. The last wafer is closest to AlSb at 1.6eV \cite{book}\\
+\\
+\\
+
+\centering
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+  & Wafer 1 & Wafer 2 & Wafer 3 \\
+   \hline
+ Band Gap & 0.7668 & 1.2664  & 1.6311 \\ 
+ Direct/Indirect & Indirect & Indirect & Direct \\
+ Material & Ge & Si & GaAs \\
+ \hline
+\end{tabular}
     
 \end{indentPar}
-\section*{References}    
-    \begin{tikzpicture}
-\datavisualization [scientific axes=clean,
-                    y axis=grid,
-                    visualize as smooth line/.list={sin,cos,tan},
-                    style sheet=strong colors,
-                    style sheet=vary dashing,
-                    sin={label in legend={text=$\sin x$}},
-                    cos={label in legend={text=$\cos x$}},
-                    tan={label in legend={text=$\tan x$}},
-                    data/format=function
-                    ]
-data [set=sin] {
-  var x : interval [-0.5*pi:4];
-  func y = sin(\value x r);
-}
-data [set=cos] {
-  var x : interval [-0.5*pi:4];
-  func y = cos(\value x r);
-}
-data [set=tan] {
-  var x : interval [-0.3*pi:.3*pi];
-  func y = tan(\value x r);
-};
-\end{tikzpicture}
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{book}
+ Solid State Electronic Devices (2006, Prentice Hall), Ben Streetman, Sanjay Banerjee
+\bibitem{Lasers}
+An Entry Level Guide to Understanding Lasers (2008), Chapter 9.2.4, Jeff Hecht, 3rd ed. 
+
+\bibitem{optical}
+Optical Processes in Semiconductors, Jacques I. Pankove
+
+\bibitem{carry}
+Cary 100/300/4000/5000/6000i/7000 Spectrophotometers User's Guide
+
+\bibitem{tauc}
+How To Correctly Determine the Band Gap Energy of Modified Semiconductor Photocatalysts Based on UV–Vis Spectra, Patrycja Makuła, Michał Pacia, and Wojciech Macyk\\https://pubs.acs.org/doi/10.1021/acs.jpclett.8b02892
+\bibitem{semi}
+Silicon Photo Multipliers Detectors Operating in Geiger Regime: an Unlimited Device for Future Applications,Giancarlo Barbarino, Riccardo de Asmundis, Gianfranca De Rosa, Carlos Maximiliano Mollo, Stefano Russo and Daniele Vivolo
+\end{thebibliography}    
+
 \end{document}

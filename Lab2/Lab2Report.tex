@@ -1,0 +1,149 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\usepackage[left=25mm,right=25mm]{geometry}
+\usepackage{pgfplots}
+\usepgfplotslibrary{external} 
+\tikzexternalize
+\usepackage{float} 
+\usepackage{multicol}
+
+\begin{document}
+\begin{multicols}{2}
+\newenvironment{indentPar}[1]%
+ {\begin{list}{}%
+         {\setlength{\leftmargin}{#1}}%
+         \item[]%
+ }
+ {\end{list}}
+
+\begin{flushleft}
+\begin{LARGE}EE 535 Lab 2: Optical Measurements of Thin Films
+\end{LARGE}
+\\Jonathan Hess
+\end{flushleft}
+
+
+\section*{Abstract}
+
+The precise thickness of a thin absorbing wafer can be found using the transmission observed from a spectrophotometer. This procedure was done for amorphous silicon (aSi) and zinc selenide (ZnSe).
+
+
+
+
+
+\section*{Introduction}
+
+The method evaluated in this paper to calculate the wafer film's width uses the transmition . 
+
+Three wafers were loaded into a spectrometer to measure their optical properties. These measured properties allowed for the calculation of band gap and whether the band gap is direct or indirect. The band gap of of a material determines its conductivity or in the case of an LED or solar panel what frequency of light it will produce/absorb. Determining if the band gap is direct would inform if any energy is required from the lattice structure whereas indirect wouldn't require this extra energy. This is important for light emitting diodes because indirect band gaps are poor emitters \cite{Lasers}.
+
+
+
+
+\section*{Experimental}
+In this lab we measured reflection, transmission,and absorption of two wafers. One was of amorphous silicon and the other was of zinc selenide (ZnSe). What was not given or know was the thickness of these wafers. These measurements were done with the Cary 5000. This spectrophotometer has a range of 175-3300nm \cite{carry} and allows for the comparison of two samples at the same time. This was used to compare the sample wafer and a blank glass simultaneously. This allows to remove influence of the glass on the wafer's measurements.\\
+
+
+
+
+\section*{Theory}
+
+Interference-free transmission can be calculated with the following equation
+
+\begin{equation}
+\label{eq:1}
+T_s = \dfrac{(1-R)^2}{1-R^2}
+\end{equation}
+
+\begin{equation}
+\label{eq:2}
+R = ((s-1)/(s+1))^2
+\end{equation}
+
+Combining \ref{eq:1} and \ref{eq:2} yeilds \ref{eq:3}.
+\begin{equation}
+\label{eq:3}
+T_s = ((s-1)/(s+1))^2
+\end{equation}
+
+\begin{indentPar}{1cm}
+\begin{indentPar}{1cm}
+Transmition $= T$ - \% of light 
+\\Reflectance $= R$ - \% of light
+\\Absorbance  $= A $  - \% of light
+\\$A+T+R = 1$
+ \\Absorbance coefficient $= \alpha \\ $
+ $\\Reflection =$ Intensity of neglected light
+$\\A= \dfrac{|I_a|}{|I|}$
+
+ $\alpha =(hv-Eg)^{1/2}$ - when direct \cite{tauc}
+ \\$\alpha =(hv-Eg)^{2}$ - when indirect \cite{tauc}
+ \\$T = (1-R^2)e^{-\alpha t}
+ \\ \alpha = (1/t)ln((1-R^2)/T)$
+\\
+\end{indentPar}
+
+These equations equations were derived and then used on outputted data files were using a python script. 
+\end{indentPar}
+
+
+
+\section*{Results}
+After running the spectrometer there were data points for the three wafers. These data points included transmission, reflection, and absorption the following graphs.
+\\
+The formula $A+R+T = 1$ was used to create the 3 plots bellow. R and T were provided but A was calculated. As can be seen in Figure ~\ref{WOneATR} the wafer does not absorb the light until near 1500nm.\\
+
+
+    
+    
+A plot was created, figure 1, by using the reflection and transmission data to calculate the $\alpha$ of the wafer. The issue with this approach was the transmission percentage went below 0 which should not be possible. To compensate for this T was set to 0.00001 whenever it was below 0. This should affect the band gap of the graph because it will only affect values beyond the linear region. The first step was to calculate alpha using the equation $ \alpha = (1/t)ln((1-R^2)/T)$. The width was known at 11.3 mils which was then converted into centimeters by diving by 393.7.
+\\
+
+     
+     In Figure \ref{WOneAbsCo} there is a lot of spread after the band gap region. This is probably due to the hard limit set to T. This limit was added to keep negative or zero values from affecting the equation. Both zero and negative values are not possible but measurements have values barely negative below 1500nm. 
+
+
+
+\centering
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+  & Wafer 1 & Wafer 2 & Wafer 3 \\
+   \hline
+ Band Gap & 0.7668 & 1.2664  & 1.6311 \\ 
+ Direct/Indirect & Indirect & Indirect & Direct \\
+ Material & Ge & Si & GaAs \\
+ \hline
+\end{tabular}
+    
+
+\section*{Appendix}
+
+\begin{thebibliography}{9}
+\bibitem{book}
+ Solid State Electronic Devices (2006, Prentice Hall), Ben Streetman, Sanjay Banerjee
+\bibitem{Lasers}
+An Entry Level Guide to Understanding Lasers (2008), Chapter 9.2.4, Jeff Hecht, 3rd ed. 
+
+\bibitem{paper}
+R Swanepoel 1983 J. Phys. E: Sci. Instrum. 16 1214
+
+\bibitem{optical}
+Optical Processes in Semiconductors, Jacques I. Pankove
+
+\bibitem{carry}
+Cary 100/300/4000/5000/6000i/7000 Spectrophotometers User's Guide
+
+\bibitem{tauc}
+How To Correctly Determine the Band Gap Energy of Modified Semiconductor Photocatalysts Based on UV–Vis Spectra, Patrycja Makuła, Michał Pacia, and Wojciech Macyk\\https://pubs.acs.org/doi/10.1021/acs.jpclett.8b02892
+\bibitem{semi}
+Silicon Photo Multipliers Detectors Operating in Geiger Regime: an Unlimited Device for Future Applications,Giancarlo Barbarino, Riccardo de Asmundis, Gianfranca De Rosa, Carlos Maximiliano Mollo, Stefano Russo and Daniele Vivolo
+\end{thebibliography}
+
+\end{multicols}
+\end{document}

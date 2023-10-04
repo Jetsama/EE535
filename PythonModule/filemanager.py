@@ -9,7 +9,7 @@ def fileEdit(In,Out,Conv,header = None):
 def fileRead(In,offset = 1):   
     x = list()
     y = list()
-
+    header = ""
     with open(In) as f_in:
         for i in range(offset):
             header = f_in.readline()

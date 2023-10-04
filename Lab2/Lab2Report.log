@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  2 OCT 2023 08:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  4 OCT 2023 06:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,50 +874,115 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip55
 )
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen293
+\captionmargin=\dimen294
+\caption@leftmargin=\dimen295
+\caption@rightmargin=\dimen296
+\caption@width=\dimen297
+\caption@indent=\dimen298
+\caption@parindent=\dimen299
+\caption@hangindent=\dimen300
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count329
+\c@continuedfloat=\count330
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count331
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count332
+)
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple.st
+y
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3
+keys2e.sty
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
+
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
 ftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count329
+\l__color_backend_stack_int=\count333
 \l__pdf_internal_box=\box114
-) (Lab2Report.aux
+))
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+Package: csvsimple 2023/05/09 v2.4.0 LaTeX CSV file processing
+)
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple-le
+gacy.sty
+Package: csvsimple-legacy 2023/05/09 version 2.4.0 LaTeX2e CSV file processing
+
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count334
+) (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read3
+\c@csvinputline=\count335
+\c@csvrow=\count336
+\c@csvcol=\count337
+\csv@out=\write4
+)
+(Lab2Report.aux
 
 LaTeX Warning: Label `eq:TransReg' multiply defined.
+
+
+LaTeX Warning: Label `AmSiLengthTable max' multiply defined.
+
+
+LaTeX Warning: Label `sub@AmSiLengthTable max' multiply defined.
 
 )
 \openout1 = `Lab2Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
-\scratchdimen=\dimen293
+\scratchcounter=\count338
+\scratchdimen=\dimen301
 \scratchbox=\box115
-\nofMPsegments=\count331
-\nofMParguments=\count332
+\nofMPsegments=\count339
+\nofMParguments=\count340
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count333
-\MPscratchDim=\dimen294
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen302
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
 \everyMPtoPDFconversion=\toks48
 )
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
@@ -968,32 +1033,33 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 20.
+ on input line 21.
 
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 21.
 (Lab2Report.out) (Lab2Report.out)
-\@outlinefile=\write4
-\openout4 = `Lab2Report.out'.
+\@outlinefile=\write5
+\openout5 = `Lab2Report.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
-Overfull \hbox (10.85075pt too wide) in paragraph at lines 33--34
+Overfull \hbox (10.85075pt too wide) in paragraph at lines 34--35
 [][]\OT1/cmr/m/n/10 https://github.com/Jetsama/EE535/tree/main/Lab2[]  
  []
 
 
-Package hyperref Warning: Suppressing empty link on input line 56.
+Package caption Warning: \label without proper reference on input line 169.
+See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+LaTeX Warning: Reference `AmSiTran' on page 1 undefined on input line 61.
 
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1003,69 +1069,127 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/Jetsan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-Package hyperref Warning: Suppressing empty link on input line 120.
+Package caption Warning: \label without proper reference on input line 124.
+See the caption package documentation for explanation.
 
-<./figures//Sik.png, id=43, 462.528pt x 346.896pt>
+
+LaTeX Warning: Reference `Sik' on page 2 undefined on input line 122.
+
+<./figures//Sik.png, id=45, 462.528pt x 346.896pt>
 File: ./figures//Sik.png Graphic file (type png)
 <use ./figures//Sik.png>
-Package pdftex.def Info: ./figures//Sik.png  used on input line 123.
+Package pdftex.def Info: ./figures//Sik.png  used on input line 125.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 123--124
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
 
-Package hyperref Warning: Suppressing empty link on input line 159.
+Package caption Warning: \label without proper reference on input line 169.
+See the caption package documentation for explanation.
 
 
-Package hyperref Warning: Suppressing empty link on input line 159.
+LaTeX Warning: Reference `AmSiTran' on page 2 undefined on input line 167.
 
-<./figures//AmorphousSilicon.png, id=52, 462.528pt x 346.896pt>
+
+Package caption Warning: \label without proper reference on input line 178.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `AmSiTranTable' on page 2 undefined on input line 167.
+
+
+<./figures//AmorphousSilicon.png, id=56, 462.528pt x 346.896pt>
 File: ./figures//AmorphousSilicon.png Graphic file (type png)
 <use ./figures//AmorphousSilicon.png>
-Package pdftex.def Info: ./figures//AmorphousSilicon.png  used on input line 16
-2.
+Package pdftex.def Info: ./figures//AmorphousSilicon.png  used on input line 17
+0.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 162--163
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 170--171
 [][] 
  []
 
+[2 <./figures//Sik.png>]
 
-Package hyperref Warning: Suppressing empty link on input line 166.
+Package caption Warning: \label without proper reference on input line 178.
+See the caption package documentation for explanation.
 
-[2 <./figures//Sik.png> <./figures//AmorphousSilicon.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+LaTeX Warning: Reference `AmSiTranTable' on page 3 undefined on input line 174.
+
+
+
+LaTeX Warning: Reference `AmSiLengthTable' on page 3 undefined on input line 19
+9.
+
+<./figures//asilengtherror.png, id=83, 462.528pt x 346.896pt>
+File: ./figures//asilengtherror.png Graphic file (type png)
+<use ./figures//asilengtherror.png>
+Package pdftex.def Info: ./figures//asilengtherror.png  used on input line 203.
+
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 203--204
+ [][] 
+ []
+
+<./figures//ninterp.png, id=84, 462.528pt x 346.896pt>
+File: ./figures//ninterp.png Graphic file (type png)
+<use ./figures//ninterp.png>
+Package pdftex.def Info: ./figures//ninterp.png  used on input line 209.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 209--209
+ [][] 
+ []
+
+<./figures//asilength.png, id=85, 462.528pt x 346.896pt>
+File: ./figures//asilength.png Graphic file (type png)
+<use ./figures//asilength.png>
+Package pdftex.def Info: ./figures//asilength.png  used on input line 212.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 212--213
+ [][] 
+ []
+
+[3 <./figures//AmorphousSilicon.png> <./figures//asilengtherror.png> <./figures
+//ninterp.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-<./figures//znsetp.png, id=75, 462.528pt x 346.896pt>
+<./figures//znsetp.png, id=97, 462.528pt x 346.896pt>
 File: ./figures//znsetp.png Graphic file (type png)
 <use ./figures//znsetp.png>
-Package pdftex.def Info: ./figures//znsetp.png  used on input line 198.
+Package pdftex.def Info: ./figures//znsetp.png  used on input line 234.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 198--199
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 234--235
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[4 <./figures//asilength.png> <./figures//znsetp.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 []\OT1/cmr/m/n/10 Cary 100/300/4000/5000/6000i/7000 Spec-
  []
 
 
-Overfull \hbox (25.68413pt too wide) in paragraph at lines 222--223
+Overfull \hbox (25.68413pt too wide) in paragraph at lines 259--260
 \OT1/cmr/m/n/10 https://pubs.acs.org/doi/10.1021/acs.jpclett.8b02892 
  []
 
-[3 <./figures//znsetp.png>] (Lab2Report.aux)
+[5] (Lab2Report.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1073,24 +1197,27 @@ Package rerunfilecheck Info: File `Lab2Report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32603 strings out of 476331
- 806386 string characters out of 5787293
+ 35079 strings out of 476331
+ 857443 string characters out of 5787293
  1872660 words of memory out of 5000000
- 52497 multiletter control sequences out of 15000+600000
- 514890 words of font info for 43 fonts, out of 8000000 for 9000
+ 54927 multiletter control sequences out of 15000+600000
+ 515497 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,8n,104p,737b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,104p,737b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jetsan/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jetsan/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jetsan/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Lab2Report.pdf (3 pages, 186842 bytes).
+/cmbx10.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Jetsan/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jetsan/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jetsan/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Je
+tsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
+Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb>
+Output written on Lab2Report.pdf (5 pages, 300802 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

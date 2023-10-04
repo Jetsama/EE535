@@ -96,6 +96,7 @@ plt.savefig("Lab2/figures/figure2.png")
 
 
 indices = find_peaks(y, width = 4)[0]
+max_indices = indices
 x_max =[xlist[i] for i in indices]
 y_max= [ylist[i] for i in indices]
 
@@ -111,30 +112,7 @@ w_max = list()
 n_error1 = 0
 
 arr = np.array(x2)
-for i in indices:
-    l2 = l1 #move lamda1 to lamda2
-    n2 = n1 #move refraction
-    n_error2 = n_error1
 
-    l1 = xlist[i] #get wavelength (lamda)
-    difference_array = np.absolute(arr*1000 -l1)
-    index = difference_array.argmin()
-    n_error1 = n[index]
-    n1 = N_func(l1)
-    
-    if(l2 != 0):
-        w_max.append((l1+l2)/2)
-
-        
-        d = (l1* l2) / (2 *( n1 *l2 - n2*l1))
-        print("d  is ", d)
-        d_error = (l1* l2) / (2 *( n_error1 *l2 - n_error1*l1))
-
-        print("de is ", d_error)
-        
-        d_error = (l1* l2) / (2 *( n_error1 *l2 - n_error1*l1))
-        d_error_max.append(d_error)
-        d_max.append(d)
 
 
 
@@ -149,28 +127,8 @@ indices = find_peaks([ -x for x in ylist], width = 4)[0]
 min_indices = indices
 x_min =[xlist[i] for i in indices]
 y_min= [ylist[i] for i in indices]
-print("min")
 
-d_min = list()
-d_error_min = list()
-w_min = list()
-for i in indices:
-    l2 = l1 #move lamda1 to lamda2
-    n2 = n1 #move refraction
-    n_error2 = n_error1
-    l1 = xlist[i] #get wavelength (lamda)
-    difference_array = np.absolute(arr*1000 -l1)
-    index = difference_array.argmin()
-    n_error1 = n[index]
-    n1 = N_func(l1)
-    if(l2 != 0):
-        d = (l1* l2) / (2 *( n_error1 *l2 - n_error2*l1))
-        d_min.append(d)
-        w_min.append((l1+l2)/2)
-        d_error = (l1* l2) / (2 *( n_error1 *l2 - n_error1*l1))
-        d_error_min.append(d_error)
-        print("d  is ", d)
-        print("de is ", d_error)
+
 
 plt.scatter(x_min, y_min) #plot mins 
 
@@ -216,6 +174,34 @@ for i in min_indices:
         d = (l1* l2) / (2 *( n_error1 *l2 - n_error2*l1))
         d_min.append(d)
         w_min.append((l1+l2)/2)
+        d_error = (l1* l2) / (2 *( n_error1 *l2 - n_error1*l1))
+        #d_error_min.append(d_error)
+        print("d  is ", d)
+l1 = 0
+l2 = 0
+n1 = 0
+n2 = 0
+d = 0
+print("max")
+d_max = list()
+w_max = list()
+for i in max_indices:
+    l2 = l1 #move lamda1 to lamda2
+    n2 = n1 #move refraction
+    n_error2 = n_error1
+    l1 = xlist[i] #get wavelength (lamda)
+    difference_array = np.absolute(arr*1000 -l1)
+    index = difference_array.argmin()
+    n_error1 = n[index]
+    
+    s = N_func(l1)
+    N = 2*s*(TM_func(l1)-Tm_func(l1))/(TM_func(l1)*Tm_func(l1)) + (pow(s,2)+1)/2
+    n1=pow(N + pow((pow(N,2)-pow(s,2)),1/2),1/2)
+    #n1 = N_func(l1)
+    if(l2 != 0):
+        d = (l1* l2) / (2 *( n_error1 *l2 - n_error2*l1))
+        d_max.append(d)
+        w_max.append((l1+l2)/2)
         d_error = (l1* l2) / (2 *( n_error1 *l2 - n_error1*l1))
         #d_error_min.append(d_error)
         print("d  is ", d)
@@ -285,3 +271,11 @@ with open("Lab2/pydata/asilengthmax.csv", "w",newline="") as f:
     for row in rows:
         writer.writerow(row)
 plt.show()
+
+def n(lamda):
+    s = N_func(lamda)
+    N = 2*s*(TM_func(lamda)-Tm_func(lamda))/(TM_func(lamda)*Tm_func(lamda)) + (pow(s,2)+1)/2
+    n1=pow(N + pow((pow(N,2)-pow(s,2)),1/2),1/2)
+    return n1
+print(n(781))
+print(n(841))

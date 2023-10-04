@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  4 OCT 2023 06:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  4 OCT 2023 07:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,12 +942,6 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 
 LaTeX Warning: Label `eq:TransReg' multiply defined.
 
-
-LaTeX Warning: Label `AmSiLengthTable max' multiply defined.
-
-
-LaTeX Warning: Label `sub@AmSiLengthTable max' multiply defined.
-
 )
 \openout1 = `Lab2Report.aux'.
 
@@ -1086,28 +1080,33 @@ Overfull \hbox (8.64137pt too wide) in paragraph at lines 125--126
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
+
+ []
+
+
 Package caption Warning: \label without proper reference on input line 169.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `AmSiTran' on page 2 undefined on input line 167.
+LaTeX Warning: Reference `AmSiTran' on page 2 undefined on input line 169.
 
 
 Package caption Warning: \label without proper reference on input line 178.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `AmSiTranTable' on page 2 undefined on input line 167.
+LaTeX Warning: Reference `AmSiTranTable' on page 2 undefined on input line 169.
 
 
-<./figures//AmorphousSilicon.png, id=56, 462.528pt x 346.896pt>
+<./figures//AmorphousSilicon.png, id=57, 462.528pt x 346.896pt>
 File: ./figures//AmorphousSilicon.png Graphic file (type png)
 <use ./figures//AmorphousSilicon.png>
 Package pdftex.def Info: ./figures//AmorphousSilicon.png  used on input line 17
-0.
+2.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 170--171
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 172--173
 [][] 
  []
 
@@ -1117,72 +1116,102 @@ Package caption Warning: \label without proper reference on input line 178.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `AmSiTranTable' on page 3 undefined on input line 174.
+LaTeX Warning: Reference `AmSiTranTable' on page 3 undefined on input line 176.
 
 
 
-LaTeX Warning: Reference `AmSiLengthTable' on page 3 undefined on input line 19
-9.
+LaTeX Warning: Reference `AmSiLengthTable' on page 3 undefined on input line 20
+1.
 
-<./figures//asilengtherror.png, id=83, 462.528pt x 346.896pt>
+<./figures//asilengtherror.png, id=85, 462.528pt x 346.896pt>
 File: ./figures//asilengtherror.png Graphic file (type png)
 <use ./figures//asilengtherror.png>
-Package pdftex.def Info: ./figures//asilengtherror.png  used on input line 203.
+Package pdftex.def Info: ./figures//asilengtherror.png  used on input line 205.
 
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 203--204
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 205--206
  [][] 
  []
 
-<./figures//ninterp.png, id=84, 462.528pt x 346.896pt>
+<./figures//ninterp.png, id=86, 462.528pt x 346.896pt>
 File: ./figures//ninterp.png Graphic file (type png)
 <use ./figures//ninterp.png>
-Package pdftex.def Info: ./figures//ninterp.png  used on input line 209.
+Package pdftex.def Info: ./figures//ninterp.png  used on input line 211.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 209--209
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 211--211
  [][] 
  []
 
-<./figures//asilength.png, id=85, 462.528pt x 346.896pt>
+<./figures//asilength.png, id=87, 462.528pt x 346.896pt>
 File: ./figures//asilength.png Graphic file (type png)
 <use ./figures//asilength.png>
-Package pdftex.def Info: ./figures//asilength.png  used on input line 212.
+Package pdftex.def Info: ./figures//asilength.png  used on input line 214.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 212--213
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
 [3 <./figures//AmorphousSilicon.png> <./figures//asilengtherror.png> <./figures
 //ninterp.png>]
+
+Package caption Warning: \label without proper reference on input line 211.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `AmSiLengthGraph' on page 4 undefined on input line 22
+8.
+
+
+Package caption Warning: \label without proper reference on input line 217.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `AmSiLengthTable max' on page 4 undefined on input lin
+e 228.
+
+
+Package caption Warning: \label without proper reference on input line 221.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `AmSiLengthTablemin' on page 4 undefined on input line
+ 228.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-<./figures//znsetp.png, id=97, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+<./figures//znsetp.png, id=102, 462.528pt x 346.896pt>
 File: ./figures//znsetp.png Graphic file (type png)
 <use ./figures//znsetp.png>
-Package pdftex.def Info: ./figures//znsetp.png  used on input line 234.
+Package pdftex.def Info: ./figures//znsetp.png  used on input line 237.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (8.64137pt too wide) in paragraph at lines 234--235
+Overfull \hbox (8.64137pt too wide) in paragraph at lines 237--238
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
 [4 <./figures//asilength.png> <./figures//znsetp.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 []\OT1/cmr/m/n/10 Cary 100/300/4000/5000/6000i/7000 Spec-
  []
 
 
-Overfull \hbox (25.68413pt too wide) in paragraph at lines 259--260
+Overfull \hbox (25.68413pt too wide) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 https://pubs.acs.org/doi/10.1021/acs.jpclett.8b02892 
  []
 
@@ -1197,10 +1226,10 @@ Package rerunfilecheck Info: File `Lab2Report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35079 strings out of 476331
- 857443 string characters out of 5787293
+ 35082 strings out of 476331
+ 857498 string characters out of 5787293
  1872660 words of memory out of 5000000
- 54927 multiletter control sequences out of 15000+600000
+ 54929 multiletter control sequences out of 15000+600000
  515497 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,104p,737b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1215,9 +1244,9 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Je
 tsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
 Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb>
-Output written on Lab2Report.pdf (5 pages, 300802 bytes).
+Output written on Lab2Report.pdf (5 pages, 304093 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

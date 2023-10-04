@@ -37,7 +37,7 @@
 
 \section*{Abstract}
 
-The precise thickness of a thin absorbing wafer can be found using the transmission observed from a spectrophotometer. This procedure was done for amorphous silicon (aSi) and zinc selenide (ZnSe) wafers with unknown widths.
+The precise thickness of a thin absorbing wafer can be found using the transmission observed from a spectrophotometer. This procedure was done for amorphous silicon (aSi,)Cadmium sulfide (CdS), and zinc selenide (ZnSe) wafers with unknown widths.
 
 
 
@@ -45,7 +45,7 @@ The precise thickness of a thin absorbing wafer can be found using the transmiss
 
 \section*{Introduction}
 
-Two wafers of different materials were observed with a spectrophotometer to yield measurements of The method evaluated in this paper to calculate the wafer film's width uses the transmition measured as well as the peaks and valleys of the resulting graph. This is known as the Swanepoel method of calculating thin film thickness.
+Three wafers of different materials were observed with a spectrophotometer to yield measurements of transmission, absorbance, substrate refractive index, as well as instrument error. The method evaluated in this paper to calculate the wafer film's width uses the transmition measured as well as the peaks and valleys of the resulting graph. Then using the substrate refractive index to calculate the  refractive index at those peaks and valleys. This is known as the Swanepoel method of calculating thin film thickness.
 
 
 
@@ -57,7 +57,7 @@ Reflective Index (n) is the measure of how much light slows and bends as it trav
 Substrate Reflective Index (s) is the measure of how much light bends as it travels through the material that the film was deposited on.
 	
 \section*{Experimental}
-During this lab measurements of two wafers were taken. These included reflection, transmission, absorbance, refractive index, as well as instrument error. One wafer was amorphous silicon and the other was of zinc selenide (ZnSe). What was not given or know was the thickness of these wafers. These measurements were done with the Cary 5000. This spectrophotometer has a range of 175-3300nm \cite{carry} and allows for the comparison of two samples at the same time. This was used to compare the sample wafer and a blank glass simultaneously. This allows to remove influence of the glass on the wafer's measurements.\\
+During this lab measurements of two wafers were taken. These included reflection, transmission, absorbance, substrate refractive index, as well as instrument error. One wafer was amorphous silicon and the other was of zinc selenide (ZnSe). What was not given or know was the thickness of these wafers. These measurements were done with the Cary 5000. This spectrophotometer has a range of 175-3300nm \cite{carry} and allows for the comparison of two samples at the same time. This was used to compare the sample wafer and a blank glass simultaneously. This allows to remove influence of the glass on the wafer's measurements.\\
 The medium in the spectrophotometer is air so there will be an assumption that the refraction index will be exactly 1. There will also be an assumption that the wafer's thickness is uniform. This is because the graph in figure \ref{AmSiTran} reflects a uniform thickness\cite{paper}. Because of the use of the Swanepoel method the substrate's refractive index was measured and used to calculate the absolute refractive index of the wafer. 
 
 
@@ -143,8 +143,10 @@ Using these maxima (or minima) the thickness of the thin film wafer can be found
 \label{eq:d}
 d = \frac{\lambda_1 \lambda_2}{2(\lambda_1 n_{e2} - \lambda_2 n_{e1})}
 \end{equation}
-To find the distance two extrema (either maximums or minimums) can be used along with equation \ref{eq:d}. This was done for all extrema for all 3 wafers.
+To find the distance two extrema (either maximums or minimums) can be used along with equation \ref{eq:d}. This was done for all extrema for all 3 wafers.\\
 
+
+One step was calculating the refraction index from the substrate refraction index. \cite{GaN}
 \begin{equation}\label{eq:N}
 N = 2s \frac{T_M -T_m}{T_M*T_m} + \frac{s^2+1}{2}
 \end{equation}
@@ -218,12 +220,13 @@ When analyzing the data the figures two methods were used. Originally the substr
 \csvautotabular{pydata/asilengthmax.csv}
 \caption{Table for wavelength of maxima and calculated lengths}
 \end{subfigure}
-\begin{subfigure}[b]{0.3\textwidth}\centering\label{AmSiLengthTable max}
+\begin{subfigure}[b]{0.3\textwidth}\centering\label{AmSiLengthTablemin}
 \csvautotabular{pydata/asilengthmin.csv}
 \caption{Table for wavelength of minima and calculated lengths}
 \end{subfigure}
 \end{figure}
-There is a very large spread in width in both. This might be caused by the low number of data points of reflective index. There are 46 points across the 103.33 nm to 2066 nm range. Except after fixing this issue the range did not decrease. This is also where there was a realization that the refractive index data was actually the substrate refractive index. There is a big difference between $s$ and $n$ that was causing this massive range. After adding equation \ref{eq:n} to the python script the length distribution went down as can be seen in figure .
+There is a very large spread in width in both. This might be caused by the low number of data points of reflective index. There are 46 points across the 103.33 nm to 2066 nm range. Except after fixing this issue the range did not decrease. This is also where there was a realization that the refractive index data was actually the substrate refractive index. There is a big difference between $s$ and $n$ that was causing this massive range. After adding equation \ref{eq:n} to the python script the length distribution went down as can be seen in figure \ref{AmSiLengthGraph} or in the tables \ref{AmSiLengthTable max} and \ref{AmSiLengthTablemin}.\\
+
 
 For better accuracy using the exact number of exterma in equation \ref{eq:interfringe}\\
 
@@ -232,9 +235,13 @@ The same process was done for the zinc selenide to find the thickness for that w
 \begin{figure}[H]
 \label{znsetran}
 \includegraphics[scale=0.5]{znsetp}
-\caption{Graph showing wavelength (nm) versus the transmission of the ZnSe Wafer }
+\caption{Graph showing wavelength (nm) versus the transmission of the ZnSe wafer }
 \end{figure}
     
+\section*{Conclusion}
+Through calculating and observing the graphs for optical properties, a scale This lab had a lot of iteration in the data analysis and code generation. 
+
+
 
 \section*{Appendix}
 For information on the pure data or computational scripts there is a repository for this and other labs. \\
